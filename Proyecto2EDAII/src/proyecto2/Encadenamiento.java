@@ -1,7 +1,6 @@
 package proyecto2;
 
 import java.util.LinkedList;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
@@ -12,15 +11,11 @@ public class Encadenamiento {
         int opt= 0;
         LinkedList<Integer>[] t= new LinkedList[15];
         initLists(t);
-        Scanner scan = new Scanner(System.in);
         
         while(opt != -1){
             Random rand= new Random();
             printMenu();
             opt = readInt();
-            System.out.println(opt);
-            System.out.println();
-            
             
             switch(opt){
                 case 0:
@@ -30,8 +25,9 @@ public class Encadenamiento {
                     break;
                     
                 case 1:
-                    System.out.println("Contenido de la lista:");
+                    System.out.println("\nContenido de la lista:");
                     System.out.println(Arrays.toString(t));
+                    System.out.println();
                     break;
                     
                 case 2:
@@ -82,7 +78,4 @@ public class Encadenamiento {
         return -1;
     }
     
-    private static void printList(LinkedList[] t){
-        
-    }
 }
