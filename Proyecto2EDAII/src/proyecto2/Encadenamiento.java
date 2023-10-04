@@ -9,11 +9,11 @@ public class Encadenamiento {
     
     public static void main(String[] args) {
         int opt= 0;
+        Random rand= new Random();
         LinkedList<Integer>[] t= new LinkedList[15];
         initLists(t);
         
         while(opt != -1){
-            Random rand= new Random();
             printMenu();
             opt = readInt();
             
