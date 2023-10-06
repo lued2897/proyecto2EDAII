@@ -110,7 +110,7 @@ public class BL{
                     }
                     break;
                 case 2:
-                    if(OBL.getC()>=0){
+                    if(OBL.getC()>0){
                         System.out.println("Numero encontrado en los indices: ");
                        for (int i = 0; i < OBL.getInd().size(); i++) 
                         System.out.println("Encontrado en el Indice: " + OBL.getInd().get(i) );

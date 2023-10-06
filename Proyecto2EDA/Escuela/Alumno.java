@@ -1,7 +1,7 @@
 package Proyecto2EDA.Escuela;
 import java.util.Scanner;
 
-public class Alumno{
+public class Alumno implements Comparable<Alumno>{
 public static int cont=0;
 private String alumno;
 private int ncuenta;
@@ -9,6 +9,10 @@ private int ncuenta;
     public Alumno(String alumno, int ncuenta) {
         this.alumno = alumno;
         this.ncuenta = ncuenta;
+    }
+
+    public Alumno(String alumno) {
+        this.alumno = alumno;
     }
 
     public static Alumno crear(){
@@ -23,9 +27,6 @@ private int ncuenta;
         cont++;
         return A;
     }
-
-
-
 
     public String getAlumno() {
         return this.alumno;
@@ -57,9 +58,12 @@ private int ncuenta;
     @Override
     public boolean equals(Object obj) {
     return this.getAlumno().equals((String)obj); // Compara solo el atributo clave
-}
+    }
 
-
+    @Override
+    public int compareTo(Alumno A2) {
+       return this.getAlumno().compareTo(A2.getAlumno());
+    }
 
 
 

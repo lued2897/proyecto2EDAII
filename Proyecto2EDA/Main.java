@@ -2,6 +2,8 @@ package Proyecto2EDA;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
+
+import Proyecto2EDA.Busquedas.BB;
 import Proyecto2EDA.Busquedas.BL;
 import Proyecto2EDA.Escuela.*;
 
@@ -28,7 +30,7 @@ public class Main {
                 case 2: m.add(Asignatura.crear()); break;
                 case 3: System.out.println("1.-Lista Alumnos 2.-Lista Materias"); s=cin.nextInt(); if(s==1){Imprimir(a);}else{Imprimir(m);} ; break;
                 case 4: BL.menu(a, m);; break;
-                case 5: break;
+                case 5: BB.menu(a, m);break;
                 default:
                 return;
 

@@ -1,14 +1,18 @@
 package Proyecto2EDA.Escuela;
 import java.util.Scanner;
-public class  Asignatura{
+public class  Asignatura implements Comparable<Asignatura>{
     private String Nombre;
     private int clave;
     public static int cont=0;
 
 
 
-    public Asignatura(String Nombre, int clave) {
+    public Asignatura  (String Nombre, int clave) {
         this.Nombre = Nombre;
+        this.clave = clave;
+    }
+    
+    public Asignatura  (int clave) {
         this.clave = clave;
     }
 
@@ -68,7 +72,10 @@ public class  Asignatura{
         
     return this.clave == entero.intValue();   // Compara solo el atributo clave
 }
-
+@Override
+    public int compareTo(Asignatura A2) {
+        return Integer.compare(this.getClave(), A2.getClave());
+    }
 
 
 
