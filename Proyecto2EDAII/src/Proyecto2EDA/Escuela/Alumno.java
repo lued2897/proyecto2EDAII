@@ -57,7 +57,7 @@ private int ncuenta;
 
     @Override
     public boolean equals(Object obj) {
-    return this.getAlumno().equals((String)obj); // Compara solo el atributo clave
+    return this.getAlumno().equals((String)obj); 
     }
 
     @Override
