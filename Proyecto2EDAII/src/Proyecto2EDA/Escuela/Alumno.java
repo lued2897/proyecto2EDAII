@@ -57,7 +57,7 @@ private int ncuenta;
 
     @Override
     public boolean equals(Object obj) {
-    return this.getAlumno().equals((String)obj); 
+    return this.getAlumno().equals((String)obj);
     }
 
     @Override

@@ -3,12 +3,11 @@ import java.util.Scanner;
 import java.util.LinkedList;
 import java.util.List;
 import Proyecto2EDA.Escuela.*;
+import Proyecto2EDA.Utilerias.Utilerias;
 public class BL{
      private boolean rb;
      private LinkedList<Integer> ind;
      private int c=0;
-
-  
 
     public BL(boolean rb, LinkedList<Integer> ind, int c) {
         this.rb = rb;
@@ -60,11 +59,8 @@ public class BL{
             }
             j++;
         }
-    
         BL OBL = new BL(b, index, count);
         return OBL;
-
-
    }
 
     
@@ -81,7 +77,7 @@ public class BL{
         System.out.println("2.- Materia por clave");
         int d= sc.nextInt();
         sc.nextLine();
-
+        Utilerias.clearScreen();
         if(d==1){
             System.out.println("Dame el nombre del alumno");
             list = a;
@@ -92,13 +88,15 @@ public class BL{
              v = sc.nextInt();
              
         }
+   
         BL OBL = BLB(v, list);
         do {
+            Utilerias.clearScreen();
             System.out.println("Escoge una opcion: ");
             System.out.println("1.-Busqueda Booleana");
             System.out.println("2.-Indice encontrado");
             System.out.println("3.-Cantidad de veces encontrado");
-
+            System.out.println("4.-Todos los datos");
             int s = sc.nextInt();
             switch (s) {
                 case 1:
@@ -108,6 +106,7 @@ public class BL{
                     }else{
                         System.out.println("No encontrado");
                     }
+                    Utilerias.pause();
                     break;
                 case 2:
                     if(OBL.getC()>0){
@@ -118,14 +117,22 @@ public class BL{
                     }else{
                         System.out.println("No encontrado");
                     }
-            
+               Utilerias.pause();
                     break;
                 case 3:
                     System.out.println("Numero encontrado " + OBL.getC() + " veces");
                     OBL.IO( list);
+                    Utilerias.pause();
                     break;
+                case 4: 
+                    if(OBL.getRb()==true){
+                         OBL.IO( list);
+                    }else{
+                        System.out.println("No encontrado");
+                    }
+                Utilerias.pause();
+                break;
                 default:
-
                 return;
             }
 

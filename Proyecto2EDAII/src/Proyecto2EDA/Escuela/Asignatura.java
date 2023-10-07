@@ -1,5 +1,6 @@
 package Proyecto2EDA.Escuela;
 import java.util.Scanner;
+
 public class  Asignatura implements Comparable<Asignatura>{
     private String Nombre;
     private int clave;
