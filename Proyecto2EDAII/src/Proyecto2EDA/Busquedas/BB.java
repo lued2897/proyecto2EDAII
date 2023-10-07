@@ -25,7 +25,7 @@ public class BB{
         if (list.isEmpty()) {
             return b; 
         }    
-        System.out.println(mid);
+        //System.out.println(mid);
         if(list.get(mid).compareTo(v)==0){
                 b=mid;
               return b;
