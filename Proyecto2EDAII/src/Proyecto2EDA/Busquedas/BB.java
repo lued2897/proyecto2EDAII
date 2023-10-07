@@ -17,10 +17,6 @@ public class BB{
     static public <T extends Comparable<T>> int BBI (T v, List<T> list){
         int b = -1;
         int mid= (list.size())/2;
-        System.out.println(mid);
-        if (list.isEmpty()) {
-            return b; 
-        }    
         if(v.compareTo(list.get(mid))==0){
                 b=mid;
               return b;      
