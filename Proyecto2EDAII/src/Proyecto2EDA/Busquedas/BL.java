@@ -4,41 +4,83 @@ import java.util.LinkedList;
 import java.util.List;
 import Proyecto2EDA.Escuela.*;
 import Proyecto2EDA.Utilerias.Utilerias;
+
+
+/**Busqueda lineal en objetos.
+ * 
+ <p>Autor: Daniel Hernandez</p>
+ <p>Ultima modificación 07/09/2023</p> 
+ */
 public class BL{
+
      private boolean rb;
      private LinkedList<Integer> ind;
      private int c=0;
 
+    /**
+     * 
+     * @param rb Resultado de la busqueda.
+     * @param ind Indices del objeto.
+     * @param c Numero de veces que aparece el objeto.
+     */
     public BL(boolean rb, LinkedList<Integer> ind, int c) {
         this.rb = rb;
         this.ind = ind;
         this.c = c;
     }
-
+    
+    /**
+     * 
+     * @return Resultado de la busqueda.
+     */
     public boolean isRb() {
         return this.rb;
     }
-
+    
+    /** Getter Resultado
+     * 
+     * @return Resultado de la busqueda
+     */
     public boolean getRb() {
         return this.rb;
     }
-
+    
+    /** Setter Resultado
+     * 
+     * @param rb Resultado de la busqueda, True o False.
+     */
     public void setRb(boolean rb) {
         this.rb = rb;
     }
-
+    
+    /** Getter Indices
+     * 
+     * @return Lista de indices del elemento buscado.
+     */
     public LinkedList<Integer> getInd() {
         return this.ind;
     }
 
+    /** Setter indices
+     * 
+     * @param ind Lista de indices del elemento buscado.
+     */
     public void setInd(LinkedList<Integer> ind) {
         this.ind = ind;
     }
-
+    
+    /** Getter Conteo
+     * 
+     * @return Conteo de apariciones del elemento buscado.
+     */
     public int getC() {
         return this.c;
     }
 
+    /** Setter Conteo
+     * 
+     * @param c Conteo de apariciones del elemento buscado.
+     */
     public void setC(int c) {
         this.c = c;
     }
@@ -46,6 +88,12 @@ public class BL{
 
 
     static Scanner sc = new Scanner(System.in);
+    /**
+     * 
+     * @param v Elemento que se busca.
+     * @param list Lista en donde se busca.
+     * @return Objeto Bl, contiene resultado, indices y conteo de la busqueda.
+     */
     static public BL BLB (Object v, List<?> list){
         boolean b = false;
         int count=0;
@@ -67,7 +115,11 @@ public class BL{
 
 
 
-
+    /** Menu de usuario para busqueda lineal.
+     * 
+     * @param a Lista de alumnos.
+     * @param m Lista de asignaturas
+     */
     static public void menu(LinkedList<Alumno> a, LinkedList<Asignatura> m ){
         boolean c=true;
         Object v = null;
@@ -144,7 +196,10 @@ public class BL{
 
     }
 
-
+    /** Imprime los valores de una lista.
+     * 
+     * @param list Lista de objetos.
+     */
     public void IO(LinkedList<?> list ){
         System.out.println("Sistema de impresion");
         for (int i = 0; i < this.getInd().size(); i++) {

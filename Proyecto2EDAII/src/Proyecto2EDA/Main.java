@@ -7,7 +7,11 @@ import Proyecto2EDA.Busquedas.BL;
 import Proyecto2EDA.Escuela.*;
 import Proyecto2EDA.Utilerias.Utilerias;
 
-
+/** Clase Main de la actividad 2: busqueda.
+ * 
+ <p>Autor: Daniel Hernandez</p>
+ <p>Ultima modificación 07/09/2023</p>
+ */
 public class Main {
     public static void main(String[] args) {
 
@@ -38,6 +42,11 @@ public class Main {
             }
         }while(true);
 }
+    
+/**Imprime el contenido de una lista
+ * 
+ * @param list Lista ligada de alumnos o materias 
+ */
 public static void Imprimir(LinkedList<?> list){
 if(list.isEmpty()){
         System.out.println("Lista vacia");

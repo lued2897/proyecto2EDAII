@@ -5,8 +5,20 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 
+/**Simulacion de resolucion de colisiones por encadenamiento
+ * 
+ <p>Autor: Perez Osorio Luis Eduardo</p>
+ <p>Ultima modificación 07/09/2023</p>
+ */
 public class Encadenamiento {
     
+    /**Metodo main de la clase Encadenamiento
+     * 
+     <p>Menu de usuario para ingresar valores a una simulacion de tabla hash 
+     e imprimir su contenido</p>
+     <p>Ultima modificación 07/09/2023</p> 
+     * @param args No recibe argumentos
+     */
     public static void main(String[] args) {
         int opt= 0;
         Random rand= new Random();

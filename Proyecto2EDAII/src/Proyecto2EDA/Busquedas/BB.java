@@ -6,14 +6,30 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import Proyecto2EDA.Utilerias.Utilerias;
+
+/**Busqueda binaria en objetos.
+ * 
+ <p>Autor: Daniel Hernandez</p>
+ <p>Ultima modificación 07/09/2023</p> 
+ */
 public class BB{
 
 
 
 
 
-
+    /**
+     * Scanner para leer datos ingresados por el usuario
+     */
     static Scanner sc = new Scanner(System.in);
+    
+    /**Busqueda de indice
+     * 
+     * @param <T> Objeto generico comparable, alumno o asignatura.
+     * @param v Elemento buscado.
+     * @param list Lista en donde buscar.
+     * @return Indice del valor encontrado, regresa -1 si falla.
+     */
     static public <T extends Comparable<T>> int BBI (T v, List<T> list){
         if(list.isEmpty())
         return-1;
@@ -38,7 +54,15 @@ public class BB{
         }
         return b;
     }
-
+    
+    /** Busqueda de todas las instancias de un elemento.
+     * 
+     * @param <T> Objeto generico comparable, alumno o ssignatura.
+     * @param v Elemento buscado.
+     * @param list Lista en donde buscar.
+     * @param mid Indice intermedio de la lista.
+     * @return Lista de todos los indices del elemento, regresa una lista vacia si falla.
+     */
     static public <T extends Comparable<T>> LinkedList<Integer> EncontrarIndicesdetodaslasincidencias(T v, List<T> list, int mid) {
         LinkedList<Integer> index = new LinkedList<>();
         if (mid<0) {
@@ -59,6 +83,13 @@ public class BB{
         }
         return index;
     }
+    
+    /** Menu de usuario para busqueda lineal
+     * 
+     * @param <T> Objeto generico comparable, alumno o Asignatura.
+     * @param a Lista de alumnos.
+     * @param m Lista de Asignaturas.
+     */
     static public <T extends Comparable<T>> void menu(LinkedList<Alumno> a, LinkedList<Asignatura> m ){
         boolean c=true;
         Object v = null;
@@ -140,7 +171,11 @@ public class BB{
     }
 
 
-
+    /** Imprime los valores de la lista 2 indicados en la lista 1
+     * 
+     * @param list Lista de indices.
+     * @param list2 Lista de Objetos.
+     */
     public static void IO(LinkedList<Integer> list, LinkedList<?> list2 ){
         System.out.println("Sistema de impresion");
         for (int i = 0; i < list.size(); i++) {
@@ -149,7 +184,10 @@ public class BB{
         }
     }
     
-
+    /** Imprime los elementos de una lista.
+     * 
+     * @param listaPrint Lista que se quiere imprimir. 
+     */
     public static void imprimirLista(List<?> listaPrint){ 
         if(listaPrint.isEmpty())
         System.out.println("Lista vacia");
