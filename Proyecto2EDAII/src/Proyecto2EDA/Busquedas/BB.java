@@ -15,14 +15,23 @@ public class BB{
 
     static Scanner sc = new Scanner(System.in);
     static public <T extends Comparable<T>> int BBI (T v, List<T> list){
+        if(list.isEmpty())
+        return-1;
         int b = -1;
+        int aux=0;
         int mid= (list.size())/2;
+        
         if(v.compareTo(list.get(mid))==0){
                 b=mid;
               return b;      
         }else if(v.compareTo(list.get(mid))>0){
-            b=mid+1;
-            b+=BBI(v, list.subList(mid+1, list.size()));
+            aux+=BBI(v, list.subList(mid+1, list.size()));
+            if(aux==-1){
+                 return -1;  
+            }else{
+              
+                b=mid+1+aux;
+            }
         }else if(v.compareTo(list.get(mid))<0){
             b=0;
             b+=BBI(v, list.subList(0,mid));
