@@ -118,7 +118,7 @@ public class  Asignatura implements Comparable<Asignatura>{
 /**Define la comparacion entre objetos de la clase Asignatura.
  * 
  * @param A2 Objeto Asignatura.
- * @return Booleano resultado de comparar las claves.
+ * @return 0 si son iguales, menor que 0 si es menor, mayor que 0 si es mayor.
  */
 @Override
     public int compareTo(Asignatura A2) {
